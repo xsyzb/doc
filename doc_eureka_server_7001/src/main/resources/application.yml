@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: doc-EurekaApplication_7001
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: EurekaApplication_7001
+  client:
+      registerWithEureka: false
+      fetchRegistry: false
+      serviceUrl:
+        defaultZone: http://${eureka.instance.hostname}:${server.port}/EurekaApplication_7001/ #单机配置
+#访问地址：localhost:7001
